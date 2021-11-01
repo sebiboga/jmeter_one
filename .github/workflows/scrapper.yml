@@ -37,3 +37,8 @@ jobs:
           plugins: jpgc-dummy
           dependencyFolder:
           
+      - uses: actions/upload-artifact@v2
+        with:
+          name: reports
+          path: reports
+          
