@@ -39,6 +39,6 @@ jobs:
         with:
           testFilePath: altom.jmx
           outputReportsFolder: reports/
-          plugins: 
+          plugins: jpgc-dummy
           dependencyFolder:
           
