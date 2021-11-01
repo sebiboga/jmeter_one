@@ -9,6 +9,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '30 18 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -35,7 +37,7 @@ jobs:
           testFilePath: altom.jmx
           outputReportsFolder: reports/
           plugins: jpgc-dummy
-          dependencyFolder:
+          
           
       - uses: actions/upload-artifact@v2
         with:
