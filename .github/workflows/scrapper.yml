@@ -9,6 +9,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '30 18 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,16 +31,16 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
       - name: Apache JMeter
         uses: rbhadti94/apache-jmeter-action@v0.4.0
         with:
           testFilePath: altom.jmx
           outputReportsFolder: reports/
           plugins: jpgc-dummy
-          dependencyFolder:
+          
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: reports
+          path: reports
           
