@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Apache JMeter
+        uses: rbhadti94/apache-jmeter-action@v0.4.0
+        with:
+          testFilePath: altom.jmx
+          outputReportsFolder: reports/
+          plugins: 
+          dependencyFolder:
+          
