@@ -38,6 +38,7 @@ jobs:
           unzip apache-jmeter-5.3.zip
           cd apache-jmeter-5.3/bin
           ./jmeter -v
+          pwd
           
       - name: install plugins
         run: |
