@@ -42,7 +42,7 @@ jobs:
           
       - name: install plugins
         run: |
-          cd lib/ext
+          cd $GITHUB_WORKSPACE/apache-jmeter-5.3/lib/ext
           wget -q --no-check-certificate https://jmeter-plugins.org/files/packages/jpgc-dummy-0.4.zip  -P .
           unzip -o jpgc-dummy-0.4.zip  && rm jpgc-dummy-0.4.zip
           
