@@ -52,5 +52,5 @@ jobs:
          for i in *.jmx;
           do
            ls $file;
-           jmeter.sh -n -t $GITHUB_WORKSPACE/$i;
+           ./jmeter -n -t $GITHUB_WORKSPACE/$i;
           done
