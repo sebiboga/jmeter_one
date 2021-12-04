@@ -44,3 +44,8 @@ jobs:
           name: reports
           path: reports
           
+    # Runs a single command using the runners shell
+      - name: try the jmeter command line
+        run: jmeter -n -t altom.jmx
+
+          
