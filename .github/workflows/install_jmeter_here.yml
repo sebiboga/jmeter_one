@@ -48,6 +48,7 @@ jobs:
           
       - name: run jmx script
         run: |
+         cd $GITHUB_WORKSPACE/apache-jmeter-5.3/bin
           ./jmeter -n -t $GITHUB_WORKSPACE/altom.jmx
           
           
