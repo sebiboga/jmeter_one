@@ -51,8 +51,8 @@ jobs:
          cd $GITHUB_WORKSPACE/apache-jmeter-5.4.1/bin
          for file in *.jmx
           do
-          ./jmeter -n -t $GITHUB_WORKSPACE/$file
-          done
+          ./jmeter -n -t "$GITHUB_WORKSPACE/$file"
+    
           
           
           
