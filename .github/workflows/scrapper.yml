@@ -34,7 +34,7 @@ jobs:
       - name: Apache JMeter
         uses: rbhadti94/apache-jmeter-action@v0.4.0
         with:
-          testFilePath: *.jmx
+          testFilePath: altom.jmx
           outputReportsFolder: reports/
           plugins: jpgc-dummy
           
