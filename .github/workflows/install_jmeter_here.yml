@@ -25,7 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: where are the files?
-        run: pwd
+        run: |
+           pwd
+           ls
 
       
       # Runs a set of commands using the runners shell
@@ -36,4 +38,4 @@ jobs:
           unzip apache-jmeter-5.3.zip
           cd apache-jmeter-5.3/bin
           ./jmeter -v
-          ./jmeter -n -t altom.jmx
+          ./jmeter -n -t $GITHUB_WORKSPACE/altom.jmx
