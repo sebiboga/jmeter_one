@@ -38,4 +38,16 @@ jobs:
           unzip apache-jmeter-5.3.zip
           cd apache-jmeter-5.3/bin
           ./jmeter -v
+          
+      - name: install plugins
+        run: |
+          cd lib/ext
+          wget -q --no-check-certificate https://jmeter-plugins.org/files/packages/jpgc-dummy-0.4.zip  -P .
+          unzip -o jpgc-dummy-0.4.zip  && rm jpgc-dummy-0.4.zip
+          
+      - name: run jmx script
+        run: |
           ./jmeter -n -t $GITHUB_WORKSPACE/altom.jmx
+          
+          
+          
