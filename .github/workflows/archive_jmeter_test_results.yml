@@ -61,4 +61,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
          name: test_results
-         path: /home/runner/work/
+         path: test_report
