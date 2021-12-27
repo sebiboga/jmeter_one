@@ -13,8 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@main
         with:
-          token: 
-          repository: 
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
           retain_days: 8
           keep_minimum_runs: 6
