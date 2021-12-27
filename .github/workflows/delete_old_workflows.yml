@@ -36,11 +36,5 @@ jobs:
           echo test, and deploy your project.
       - name: Delete workflow runs
         with:
-          # The token used to authenticate.
-          token: # default is ${{ github.token }}
-          # The name of the repository.
-          repository: # default is ${{ github.repository }}
-          # The number of days.
-          retain_days: # default is 8
-          # The minimum runs to keep for each workflow.
-          keep_minimum_runs: # default is 6
+          retain_days: 8
+          keep_minimum_runs: 6
