@@ -43,7 +43,7 @@ jobs:
         with:
          # The path to the JMX test file
          testFilePath: ./
-          outputReportsFolder: # optional, default is reports/
-           plugins: jpgc-dummy
+         outputReportsFolder:  reports/
+         plugins: jpgc-dummy
           
           
