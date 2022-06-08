@@ -1,0 +1,24 @@
+
+name: run jmeter scripts
+
+on:
+  
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  
+  workflow_dispatch:
+
+
+jobs:
+  
+  build:
+    
+    runs-on: ubuntu-latest
+
+    
+    steps:
+      - name: run jmeter on github action
+        uses: sebiboga/run-jmeter-github-action@v0.0.4
